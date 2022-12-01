@@ -123,9 +123,9 @@
     
     
     
-    <category term="NLP" scheme="http://hanliuliuhan.github.io/tags/NLP/"/>
-    
     <category term="Transformers" scheme="http://hanliuliuhan.github.io/tags/Transformers/"/>
+    
+    <category term="NLP" scheme="http://hanliuliuhan.github.io/tags/NLP/"/>
     
   </entry>
   
