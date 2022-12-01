@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+<script>!function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("use-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()</script>
+
+<meta charset="utf-8" >
+
+<title>What are Transformers in NLP?</title>
+<meta name="keywords" content="What are Transformers in NLP?, hanliuliuhan&#39;s tech blog">
+<meta name="description" content="The original Transformer model proposed in this paper.A transformer is a deep learning model that adopts the mechanism o">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/style/main.css">
+
+
+<link rel="stylesheet" href="/style/jquery.fancybox.min.css">
+
+
+
+
+    <link rel="stylesheet" href="/style/prism.css"/>
+
+
+
+
+  <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="hanliuliuhan's tech blog" type="application/atom+xml">
+</head>
+  <body>
+    <div id="app" class="main">
+
+<div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="http://hanliuliuhan.github.io">
+        <img class="avatar" src="/images/avatar.jpeg" alt="" width="32px" height="32px">
+      </a>
+      <a href="http://hanliuliuhan.github.io">
+        <h1 class="site-title">hanliuliuhan&#39;s tech blog</h1>
+      </a>
+    </div>
+    <div class="right">
+        <i class="icon menu-switch icon-menu-outline" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="menu-container" style="height: 0;opacity: 0;">
+<nav class="menu-list">
+  
+    
+      <a href="/" class="menu purple-link">
+        Home
+      </a>
+    
+  
+    
+      <a href="/tags" class="menu purple-link">
+        Tags
+      </a>
+    
+  
+    
+      <a href="/archives" class="menu purple-link">
+        Archives
+      </a>
+    
+  
+    
+      <a href="/about" class="menu purple-link">
+        About
+      </a>
+    
+  
+</nav>
+</div>
+
+
+
+  <div class="content-container">
+    <div class="post-detail">
+      
+      <h2 class="post-title">What are Transformers in NLP?</h2>
+      <div class="post-info post-detail-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-12-02</span>
+        
+          <span>
+          <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="/tags/NLP/">
+              NLP
+                
+                  ，
+                
+              </a>
+            
+              <a href="/tags/Transformers/">
+              Transformers
+                
+              </a>
+            
+          </span>
+        
+      </div>
+      <div class="post-content-wrapper">
+        <div class="post-content">
+          <h4 id="The-original-Transformer-model-proposed-in-this-paper"><a href="#The-original-Transformer-model-proposed-in-this-paper" class="headerlink" title="The original Transformer model proposed in this paper."></a>The original Transformer model proposed in this paper.</h4><p>A <strong>transformer</strong> is a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Deep_learning">deep learning</a> <strong>model</strong> that adopts the mechanism of <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Attention_(machine_learning)">self-attention</a>, differentially weighting the significance of each part of the input data. </p>
+<p>Transformer is a new <strong>architecture</strong> that aims to solve tasks sequence-to-sequence while easily <strong>handling long-distance dependencies</strong>. Computing the input and output representations without using sequence-aligned RNNs or convolutions and it relies entirely on self-attention. </p>
+<p>Unlike RNNs, transformers process t<strong>he entire input all at once.</strong> The <strong>attention mechanism</strong> provides context for any position in the input sequence. For example, if the input data is a natural language sentence, the transformer does not have to process one word at a time. This allows for more <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Parallel_computing">parallelization</a> than RNNs and therefore reduces training times.</p>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)">Transformer (machine learning model) - Wikipedia</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.knoldus.com/what-are-transformers-in-nlp-and-its-advantages/#:~:text=NLP's%20Transformer%20is%20a%20new,relies%20entirely%20on%20self%2Dattention.">What Are Transformers In NLP And It’s Advantages - Knoldus Blogs</a></p>
+<p>In short, Transformers are language models. All the Transformer models mentioned above (GPT, BERT, BART, T5, etc.) have been trained as <em>language models</em>. This means they have been trained on large amounts of raw text in a self-supervised fashion. Self-supervised learning is a type of training in which the objective is automatically computed from the inputs of the model. That means that <strong>humans are not needed to label the data!</strong>(It still needs labelled data, but these labels are auto-composed, rather than human annotated)</p>
+<p>Fine tuning stage:</p>
+<p>the general pretrained model then goes through a process called <em>transfer learning</em>. During this process, the model is fine-tuned in a supervised way — that is, using human-annotated labels — on a given task.</p>
+<p>Pretraining stage:</p>
+<p><em>Pretraining</em> is the act of training a model from scratch: the weights are randomly initialized, and the training starts without any prior knowledge.</p>
+<h4 id="The-Transformers-Library"><a href="#The-Transformers-Library" class="headerlink" title="The Transformers Library"></a>The Transformers Library</h4><p>The Tranformers library provides thousands of Transformer-architecture models that enable a developer to perform various NLP tasks.</p>
+<p>Transformers provides APIs (what is an api?)and tools to easily download and train state-of-the-art pretrained models.</p>
+<h3 id="General-architecture-of-thetransformer-model"><a href="#General-architecture-of-thetransformer-model" class="headerlink" title="General architecture of thetransformer model"></a>General architecture of thetransformer model</h3><p>The model is primarily composed of two blocks:</p>
+<ul>
+<li><p><strong>Encoder (left)</strong>: The encoder receives an <strong>input</strong> and builds a representation of it (its <strong>features</strong>). This means that the model is optimized to acquire understanding from the input.</p>
+</li>
+<li><p><strong>Decoder (right)</strong>: The decoder uses the encoder’s representation (<strong>features</strong>) along with other <strong>inputs</strong> to generate a target sequence. This means that the model is optimized for generating outputs.</p>
+</li>
+</ul>
+<p>Each of these parts can be used independently, depending on the task:</p>
+<ul>
+<li><strong>Encoder-only models</strong>: Good for tasks that require understanding of the input, such as sentence classification and named entity recognition.</li>
+<li><strong>Decoder-only models</strong>: Good for generative tasks such as text generation.</li>
+<li><strong>Encoder-decoder models</strong> or <strong>sequence-to-sequence models</strong>: Good for generative tasks that require an input, such as translation or summarization.</li>
+</ul>
+
+        </div>
+        <div class="top-div">
+          <ol class="top-box"><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#General-architecture-of-thetransformer-model"><span class="top-box-text">General architecture of thetransformer model</span></a></li></ol>
+        </div>
+      </div>
+    </div>
+
+    
+      <div class="next-post">
+        <a class="purple-link" href="/2022/12/02/NLP-and-The-Tasks/">
+          <h3 class="post-title">
+            下一篇：NLP and The Tasks
+          </h3>
+        </a>
+      </div>
+    
+  </div>
+
+
+
+
+<footer>
+<div class="site-footer">
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/hanliuliuhan" target="_blank">
+          <i class="icon icon-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <a href="https://github.com/f-dong/hexo-theme-minimalism" target="_blank">Theme</a>
+  
+  
+  
+  
+  
+  
+</div>
+</footer>
+
+
+      </div>
+      
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.fancybox.min.js"></script>
+
+
+
+    <script>window.is_post = true;</script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+    </div>
+  </body>
+</html>
+

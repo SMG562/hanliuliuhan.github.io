@@ -6,7 +6,7 @@
   <link href="http://hanliuliuhan.github.io/atom.xml" rel="self"/>
   
   <link href="http://hanliuliuhan.github.io/"/>
-  <updated>2022-12-01T01:53:51.088Z</updated>
+  <updated>2022-12-01T20:22:49.794Z</updated>
   <id>http://hanliuliuhan.github.io/</id>
   
   <author>
@@ -17,111 +17,71 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>macbook pro test</title>
-    <link href="http://hanliuliuhan.github.io/2022/12/01/macbook-pro-test/"/>
-    <id>http://hanliuliuhan.github.io/2022/12/01/macbook-pro-test/</id>
-    <published>2022-12-01T01:53:51.000Z</published>
-    <updated>2022-12-01T01:53:51.088Z</updated>
+    <title>Attention Layers</title>
+    <link href="http://hanliuliuhan.github.io/2022/12/02/Attention-Layers/"/>
+    <id>http://hanliuliuhan.github.io/2022/12/02/Attention-Layers/</id>
+    <published>2022-12-01T20:22:09.000Z</published>
+    <updated>2022-12-01T20:22:49.794Z</updated>
+    
+    <content type="html"><![CDATA[<p>This layer will tell the model to pay specific attention to certain words in the sentence you passed .</p><p>The <em>attention mask</em> can also be used in the encoder&#x2F;decoder to prevent the model from paying attention to some special words — for instance, the special padding word used to make all the inputs the same length when batching together sentences.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;This layer will tell the model to pay specific attention to certain words in the sentence you passed .&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;attention mask&lt;/em&gt;</summary>
+      
     
     
     
     
+    <category term="Transformer" scheme="http://hanliuliuhan.github.io/tags/Transformer/"/>
     
   </entry>
   
   <entry>
-    <title>The third post</title>
-    <link href="http://hanliuliuhan.github.io/2022/11/29/The-third-post/"/>
-    <id>http://hanliuliuhan.github.io/2022/11/29/The-third-post/</id>
-    <published>2022-11-29T05:20:55.000Z</published>
-    <updated>2022-11-29T05:21:56.977Z</updated>
+    <title>What are Transformers in NLP?</title>
+    <link href="http://hanliuliuhan.github.io/2022/12/02/What-are-Transformers-in-NLP/"/>
+    <id>http://hanliuliuhan.github.io/2022/12/02/What-are-Transformers-in-NLP/</id>
+    <published>2022-12-01T20:14:49.000Z</published>
+    <updated>2022-12-01T20:20:46.580Z</updated>
     
-    <content type="html"><![CDATA[<p>This is the third post.</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="The-original-Transformer-model-proposed-in-this-paper"><a href="#The-original-Transformer-model-proposed-in-this-paper" class="headerlink" title="The original Transformer model proposed in this paper."></a>The original Transformer model proposed in this paper.</h4><p>A <strong>transformer</strong> is a <a href="https://en.wikipedia.org/wiki/Deep_learning">deep learning</a> <strong>model</strong> that adopts the mechanism of <a href="https://en.wikipedia.org/wiki/Attention_(machine_learning)">self-attention</a>, differentially weighting the significance of each part of the input data. </p><p>Transformer is a new <strong>architecture</strong> that aims to solve tasks sequence-to-sequence while easily <strong>handling long-distance dependencies</strong>. Computing the input and output representations without using sequence-aligned RNNs or convolutions and it relies entirely on self-attention. </p><p>Unlike RNNs, transformers process t<strong>he entire input all at once.</strong> The <strong>attention mechanism</strong> provides context for any position in the input sequence. For example, if the input data is a natural language sentence, the transformer does not have to process one word at a time. This allows for more <a href="https://en.wikipedia.org/wiki/Parallel_computing">parallelization</a> than RNNs and therefore reduces training times.</p><p><a href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)">Transformer (machine learning model) - Wikipedia</a></p><p><a href="https://blog.knoldus.com/what-are-transformers-in-nlp-and-its-advantages/#:~:text=NLP's%20Transformer%20is%20a%20new,relies%20entirely%20on%20self%2Dattention.">What Are Transformers In NLP And It’s Advantages - Knoldus Blogs</a></p><p>In short, Transformers are language models. All the Transformer models mentioned above (GPT, BERT, BART, T5, etc.) have been trained as <em>language models</em>. This means they have been trained on large amounts of raw text in a self-supervised fashion. Self-supervised learning is a type of training in which the objective is automatically computed from the inputs of the model. That means that <strong>humans are not needed to label the data!</strong>(It still needs labelled data, but these labels are auto-composed, rather than human annotated)</p><p>Fine tuning stage:</p><p>the general pretrained model then goes through a process called <em>transfer learning</em>. During this process, the model is fine-tuned in a supervised way — that is, using human-annotated labels — on a given task.</p><p>Pretraining stage:</p><p><em>Pretraining</em> is the act of training a model from scratch: the weights are randomly initialized, and the training starts without any prior knowledge.</p><h4 id="The-Transformers-Library"><a href="#The-Transformers-Library" class="headerlink" title="The Transformers Library"></a>The Transformers Library</h4><p>The Tranformers library provides thousands of Transformer-architecture models that enable a developer to perform various NLP tasks.</p><p>Transformers provides APIs (what is an api?)and tools to easily download and train state-of-the-art pretrained models.</p><h3 id="General-architecture-of-thetransformer-model"><a href="#General-architecture-of-thetransformer-model" class="headerlink" title="General architecture of thetransformer model"></a>General architecture of thetransformer model</h3><p>The model is primarily composed of two blocks:</p><ul><li><p><strong>Encoder (left)</strong>: The encoder receives an <strong>input</strong> and builds a representation of it (its <strong>features</strong>). This means that the model is optimized to acquire understanding from the input.</p></li><li><p><strong>Decoder (right)</strong>: The decoder uses the encoder’s representation (<strong>features</strong>) along with other <strong>inputs</strong> to generate a target sequence. This means that the model is optimized for generating outputs.</p></li></ul><p>Each of these parts can be used independently, depending on the task:</p><ul><li><strong>Encoder-only models</strong>: Good for tasks that require understanding of the input, such as sentence classification and named entity recognition.</li><li><strong>Decoder-only models</strong>: Good for generative tasks such as text generation.</li><li><strong>Encoder-decoder models</strong> or <strong>sequence-to-sequence models</strong>: Good for generative tasks that require an input, such as translation or summarization.</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;This is the third post.&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h4 id=&quot;The-original-Transformer-model-proposed-in-this-paper&quot;&gt;&lt;a href=&quot;#The-original-Transformer-model-proposed-in-this-paper&quot; class=&quot;heade</summary>
       
     
     
     
     
-    <category term="tag2" scheme="http://hanliuliuhan.github.io/tags/tag2/"/>
+    <category term="NLP" scheme="http://hanliuliuhan.github.io/tags/NLP/"/>
     
-    <category term="tag3" scheme="http://hanliuliuhan.github.io/tags/tag3/"/>
-    
-    <category term="tag4" scheme="http://hanliuliuhan.github.io/tags/tag4/"/>
+    <category term="Transformers" scheme="http://hanliuliuhan.github.io/tags/Transformers/"/>
     
   </entry>
   
   <entry>
-    <title>post 2022-11-29</title>
-    <link href="http://hanliuliuhan.github.io/2022/11/29/post-2022-11-29/"/>
-    <id>http://hanliuliuhan.github.io/2022/11/29/post-2022-11-29/</id>
-    <published>2022-11-28T23:28:44.000Z</published>
-    <updated>2022-11-28T23:29:24.916Z</updated>
+    <title>NLP and The Tasks</title>
+    <link href="http://hanliuliuhan.github.io/2022/12/02/NLP-and-The-Tasks/"/>
+    <id>http://hanliuliuhan.github.io/2022/12/02/NLP-and-The-Tasks/</id>
+    <published>2022-12-01T20:12:34.000Z</published>
+    <updated>2022-12-01T20:14:09.839Z</updated>
     
-    <content type="html"><![CDATA[<p>please test. </p><h3 id="section-1"><a href="#section-1" class="headerlink" title="section 1"></a>section 1</h3><p>this is section 1. </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;please test. &lt;/p&gt;
-&lt;h3 id=&quot;section-1&quot;&gt;&lt;a href=&quot;#section-1&quot; class=&quot;headerlink&quot; title=&quot;section 1&quot;&gt;&lt;/a&gt;section 1&lt;/h3&gt;&lt;p&gt;this is section 1. &lt;/</summary>
-      
-    
-    
-    
-    
-    <category term="tag one, tag 2" scheme="http://hanliuliuhan.github.io/tags/tag-one-tag-2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>page1</title>
-    <link href="http://hanliuliuhan.github.io/2022/11/28/page1/"/>
-    <id>http://hanliuliuhan.github.io/2022/11/28/page1/</id>
-    <published>2022-11-28T03:15:58.000Z</published>
-    <updated>2022-11-28T03:15:58.905Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>post_1</title>
-    <link href="http://hanliuliuhan.github.io/2022/11/28/post-1/"/>
-    <id>http://hanliuliuhan.github.io/2022/11/28/post-1/</id>
-    <published>2022-11-28T02:26:18.000Z</published>
-    <updated>2022-11-28T02:26:18.071Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://hanliuliuhan.github.io/2022/11/28/hello-world/"/>
-    <id>http://hanliuliuhan.github.io/2022/11/28/hello-world/</id>
-    <published>2022-11-28T02:22:59.650Z</published>
-    <updated>2022-11-28T02:22:59.650Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="What-is-NLP"><a href="#What-is-NLP" class="headerlink" title="What is NLP?"></a>What is NLP?</h3><p>NLP is a field of linguistics and machine learning focused on understanding everything related to <strong>human language.</strong> </p><p>The aim of NLP tasks is not only to understand single words individually, but to be able to <strong>understand the context</strong> of those words.</p><h3 id="Subtasks-of-NLP"><a href="#Subtasks-of-NLP" class="headerlink" title="Subtasks of NLP"></a>Subtasks of NLP</h3><ul><li><p><strong>Classifying whole sentences</strong></p><ul><li>Getting the sentiment of a review.</li><li>Categorization of a piece of text.</li><li>Detecting if an email is spam.</li><li>Whether two sentences are logically related or not.</li></ul></li><li><p><strong>Classifying each word in a sentence</strong></p><ul><li>Identifying the grammatical components of a sentence (noun, verb, adjective) This is the task named Syntax Analysis.</li><li>or the named entities (person, location, organization) This is the task named Named Entity Recognition.</li></ul></li><li><p><strong>Generating text content</strong>: Completing a <strong>prompt</strong> with auto-generated text, filling in the <strong>blanks</strong> in a text with masked words.</p></li><li><p><strong>Generating a new sentence from an input text</strong>: Translating a text into another language, summarizing a text.</p></li><li><p><strong>Extracting an answer from a text</strong>: Given a question and a context, extracting the answer to the question based on the information provided in the context.</p></li></ul><p>NLP isn’t limited to written text though. It also tackles complex challenges in speech recognition and computer vision, such as generating a transcript of an audio sample or a description of an image.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+    <summary type="html">&lt;h3 id=&quot;What-is-NLP&quot;&gt;&lt;a href=&quot;#What-is-NLP&quot; class=&quot;headerlink&quot; title=&quot;What is NLP?&quot;&gt;&lt;/a&gt;What is NLP?&lt;/h3&gt;&lt;p&gt;NLP is a field of linguistics an</summary>
       
     
     
     
+    
+    <category term="NLP" scheme="http://hanliuliuhan.github.io/tags/NLP/"/>
     
   </entry>
   
