@@ -87,7 +87,7 @@
     <link href="http://hanliuliuhan.github.io/2022/12/02/Attention-Layers/"/>
     <id>http://hanliuliuhan.github.io/2022/12/02/Attention-Layers/</id>
     <published>2022-12-01T20:22:09.000Z</published>
-    <updated>2022-12-01T20:22:49.794Z</updated>
+    <updated>2022-12-01T20:29:19.241Z</updated>
     
     <content type="html"><![CDATA[<p>This layer will tell the model to pay specific attention to certain words in the sentence you passed .</p><p>The <em>attention mask</em> can also be used in the encoder&#x2F;decoder to prevent the model from paying attention to some special words — for instance, the special padding word used to make all the inputs the same length when batching together sentences.</p>]]></content>
     
@@ -101,7 +101,7 @@
     
     
     
-    <category term="Transformer" scheme="http://hanliuliuhan.github.io/tags/Transformer/"/>
+    <category term="Transformers" scheme="http://hanliuliuhan.github.io/tags/Transformers/"/>
     
   </entry>
   
