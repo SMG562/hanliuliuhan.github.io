@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+<script>!function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("use-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()</script>
+
+<meta charset="utf-8" >
+
+<title>What is an API?</title>
+<meta name="keywords" content="What is an API?, hanliuliuhan&#39;s tech blog">
+<meta name="description" content="APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and pr">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/style/main.css">
+
+
+<link rel="stylesheet" href="/style/jquery.fancybox.min.css">
+
+
+
+
+    <link rel="stylesheet" href="/style/prism.css"/>
+
+
+
+
+  <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="hanliuliuhan's tech blog" type="application/atom+xml">
+</head>
+  <body>
+    <div id="app" class="main">
+
+<div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="http://hanliuliuhan.github.io">
+        <img class="avatar" src="/images/avatar.jpeg" alt="" width="32px" height="32px">
+      </a>
+      <a href="http://hanliuliuhan.github.io">
+        <h1 class="site-title">hanliuliuhan&#39;s tech blog</h1>
+      </a>
+    </div>
+    <div class="right">
+        <i class="icon menu-switch icon-menu-outline" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="menu-container" style="height: 0;opacity: 0;">
+<nav class="menu-list">
+  
+    
+      <a href="/" class="menu purple-link">
+        Home
+      </a>
+    
+  
+    
+      <a href="/tags" class="menu purple-link">
+        Tags
+      </a>
+    
+  
+    
+      <a href="/archives" class="menu purple-link">
+        Archives
+      </a>
+    
+  
+    
+      <a href="/about" class="menu purple-link">
+        About
+      </a>
+    
+  
+</nav>
+</div>
+
+
+
+  <div class="content-container">
+    <div class="post-detail">
+      
+      <h2 class="post-title">What is an API?</h2>
+      <div class="post-info post-detail-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-12-02</span>
+        
+          <span>
+          <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="/tags/devops/">
+              devops
+                
+              </a>
+            
+          </span>
+        
+      </div>
+      <div class="post-content-wrapper">
+        <div class="post-content">
+          <p>APIs are <strong>mechanisms that enable two software components to communicate with each other using a set of definitions and protocols</strong>. For example, the weather bureau’s software system contains daily weather data. The weather app on your phone “talks” to this system via APIs and shows you daily weather updates on your phone.</p>
+<p><a target="_blank" rel="noopener" href="https://aws.amazon.com/what-is/api/#:~:text=API%20stands%20for%20Application%20Programming,other%20using%20requests%20and%20responses.">What is an API? - API Beginner’s Guide - AWS</a></p>
+<h5 id="What-does-API-stand-for"><a href="#What-does-API-stand-for" class="headerlink" title="What does API stand for?"></a>What does API stand for?</h5><p>API stands for <strong>Application Programming Interface.</strong> </p>
+<p>In the context of APIs, the word <strong>Application</strong> refers to any software with a distinct function. Interface can be thought of as a contract of service between two applications. This contract defines how the two communicate with each other using requests and responses.</p>
+<h4 id="How-do-APIs-work"><a href="#How-do-APIs-work" class="headerlink" title="How do APIs work?"></a>How do APIs work?</h4><p>API architecture is usually explained in terms of client and server. The application sending the request is called the client, and the application sending the response is called the server. So in the weather example, the bureau’s weather database is the server, and the mobile app is the client. </p>
+<p>There are four different ways that APIs can work depending on when and why they were created.</p>
+<h5 id="SOAP-APIs"><a href="#SOAP-APIs" class="headerlink" title="SOAP APIs"></a>SOAP APIs</h5><p>These APIs use Simple Object Access Protocol. Client and server exchange messages using XML. This is a less flexible API that was more popular in the past.</p>
+<h5 id="RPC-APIs"><a href="#RPC-APIs" class="headerlink" title="RPC APIs"></a>RPC APIs</h5><p>These APIs are called Remote Procedure Calls. The client completes a function (or procedure) on the server, and the server sends the output back to the client.</p>
+<h5 id="Websocket-APIs"><a href="#Websocket-APIs" class="headerlink" title="Websocket APIs"></a>Websocket APIs</h5><p><a target="_blank" rel="noopener" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-overview?pg=wianapi&cta=websocketapi">Websocket API</a> is another modern web API development that uses JSON objects to pass data. A WebSocket API supports two-way communication between client apps and the server. The server can send callback messages to connected clients, making it more efficient than REST API.</p>
+<h5 id="REST-APIs"><a href="#REST-APIs" class="headerlink" title="REST APIs"></a>REST APIs</h5><p>These are the most popular and flexible APIs found on the web today. The client sends requests to the server as data. The server uses this client input to start internal functions and returns output data back to the client. Let’s look at REST APIs in more detail below.</p>
+<h5 id="What-are-REST-APIs"><a href="#What-are-REST-APIs" class="headerlink" title="What are REST APIs?"></a>What are REST APIs?</h5><p>REST stands for Representational State Transfer. REST defines a set of functions like GET, PUT, DELETE, etc. that clients can use to access server data. Clients and servers exchange data using HTTP.</p>
+<p>The main feature of <a target="_blank" rel="noopener" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vs-rest?pg=wianapi&cta=restapi">REST API</a> is statelessness. Statelessness means that servers do not save client data between requests. Client requests to the server are similar to URLs you type in your browser to visit a website. The response from the server is plain data, without the typical graphical rendering of a web page.</p>
+<h4 id="How-do-APIs-work-1"><a href="#How-do-APIs-work-1" class="headerlink" title="How do APIs work?"></a>How do APIs work?</h4><p>APIs let your product or service communicate with other products and services without having to know how they’re implemented. </p>
+<p><a target="_blank" rel="noopener" href="https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces">What is an API?</a></p>
+
+        </div>
+        <div class="top-div">
+          
+        </div>
+      </div>
+    </div>
+
+    
+      <div class="next-post">
+        <a class="purple-link" href="/2022/12/02/pipeline-function-of-the-transformers-library/">
+          <h3 class="post-title">
+            下一篇：pipeline() function of the transformers library
+          </h3>
+        </a>
+      </div>
+    
+  </div>
+
+
+
+
+<footer>
+<div class="site-footer">
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/hanliuliuhan" target="_blank">
+          <i class="icon icon-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <a href="https://github.com/f-dong/hexo-theme-minimalism" target="_blank">Theme</a>
+  
+  
+  
+  
+  
+  
+</div>
+</footer>
+
+
+      </div>
+      
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.fancybox.min.js"></script>
+
+
+
+    <script>window.is_post = true;</script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+    </div>
+  </body>
+</html>
+

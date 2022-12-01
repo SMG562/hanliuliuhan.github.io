@@ -6,7 +6,7 @@
   <link href="http://hanliuliuhan.github.io/atom.xml" rel="self"/>
   
   <link href="http://hanliuliuhan.github.io/"/>
-  <updated>2022-12-01T20:22:49.794Z</updated>
+  <updated>2022-12-01T20:28:24.240Z</updated>
   <id>http://hanliuliuhan.github.io/</id>
   
   <author>
@@ -15,6 +15,72 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>What is an API?</title>
+    <link href="http://hanliuliuhan.github.io/2022/12/02/What-is-an-API/"/>
+    <id>http://hanliuliuhan.github.io/2022/12/02/What-is-an-API/</id>
+    <published>2022-12-01T20:27:41.000Z</published>
+    <updated>2022-12-01T20:28:24.240Z</updated>
+    
+    <content type="html"><![CDATA[<p>APIs are <strong>mechanisms that enable two software components to communicate with each other using a set of definitions and protocols</strong>. For example, the weather bureau’s software system contains daily weather data. The weather app on your phone “talks” to this system via APIs and shows you daily weather updates on your phone.</p><p><a href="https://aws.amazon.com/what-is/api/#:~:text=API%20stands%20for%20Application%20Programming,other%20using%20requests%20and%20responses.">What is an API? - API Beginner’s Guide - AWS</a></p><h5 id="What-does-API-stand-for"><a href="#What-does-API-stand-for" class="headerlink" title="What does API stand for?"></a>What does API stand for?</h5><p>API stands for <strong>Application Programming Interface.</strong> </p><p>In the context of APIs, the word <strong>Application</strong> refers to any software with a distinct function. Interface can be thought of as a contract of service between two applications. This contract defines how the two communicate with each other using requests and responses.</p><h4 id="How-do-APIs-work"><a href="#How-do-APIs-work" class="headerlink" title="How do APIs work?"></a>How do APIs work?</h4><p>API architecture is usually explained in terms of client and server. The application sending the request is called the client, and the application sending the response is called the server. So in the weather example, the bureau’s weather database is the server, and the mobile app is the client. </p><p>There are four different ways that APIs can work depending on when and why they were created.</p><h5 id="SOAP-APIs"><a href="#SOAP-APIs" class="headerlink" title="SOAP APIs"></a>SOAP APIs</h5><p>These APIs use Simple Object Access Protocol. Client and server exchange messages using XML. This is a less flexible API that was more popular in the past.</p><h5 id="RPC-APIs"><a href="#RPC-APIs" class="headerlink" title="RPC APIs"></a>RPC APIs</h5><p>These APIs are called Remote Procedure Calls. The client completes a function (or procedure) on the server, and the server sends the output back to the client.</p><h5 id="Websocket-APIs"><a href="#Websocket-APIs" class="headerlink" title="Websocket APIs"></a>Websocket APIs</h5><p><a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-overview?pg=wianapi&cta=websocketapi">Websocket API</a> is another modern web API development that uses JSON objects to pass data. A WebSocket API supports two-way communication between client apps and the server. The server can send callback messages to connected clients, making it more efficient than REST API.</p><h5 id="REST-APIs"><a href="#REST-APIs" class="headerlink" title="REST APIs"></a>REST APIs</h5><p>These are the most popular and flexible APIs found on the web today. The client sends requests to the server as data. The server uses this client input to start internal functions and returns output data back to the client. Let’s look at REST APIs in more detail below.</p><h5 id="What-are-REST-APIs"><a href="#What-are-REST-APIs" class="headerlink" title="What are REST APIs?"></a>What are REST APIs?</h5><p>REST stands for Representational State Transfer. REST defines a set of functions like GET, PUT, DELETE, etc. that clients can use to access server data. Clients and servers exchange data using HTTP.</p><p>The main feature of <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vs-rest?pg=wianapi&cta=restapi">REST API</a> is statelessness. Statelessness means that servers do not save client data between requests. Client requests to the server are similar to URLs you type in your browser to visit a website. The response from the server is plain data, without the typical graphical rendering of a web page.</p><h4 id="How-do-APIs-work-1"><a href="#How-do-APIs-work-1" class="headerlink" title="How do APIs work?"></a>How do APIs work?</h4><p>APIs let your product or service communicate with other products and services without having to know how they’re implemented. </p><p><a href="https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces">What is an API?</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;APIs are &lt;strong&gt;mechanisms that enable two software components to communicate with each other using a set of definitions and protocols&lt;/</summary>
+      
+    
+    
+    
+    
+    <category term="devops" scheme="http://hanliuliuhan.github.io/tags/devops/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pipeline() function of the transformers library</title>
+    <link href="http://hanliuliuhan.github.io/2022/12/02/pipeline-function-of-the-transformers-library/"/>
+    <id>http://hanliuliuhan.github.io/2022/12/02/pipeline-function-of-the-transformers-library/</id>
+    <published>2022-12-01T20:26:57.000Z</published>
+    <updated>2022-12-01T20:27:33.702Z</updated>
+    
+    <content type="html"><![CDATA[<p>It connects a model with its necessary preprocessing and postprocessing steps, allowing us to directly input any text and get an intelligible answer:</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> transformers <span class="token keyword">import</span> pipelineclassifier <span class="token operator">=</span> pipeline<span class="token punctuation">(</span><span class="token string">"sentiment-analysis"</span><span class="token punctuation">)</span>classifier<span class="token punctuation">(</span><span class="token string">"I've been waiting for a HuggingFace course my whole life."</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>output </p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token string">'label'</span><span class="token punctuation">:</span> <span class="token string">'POSITIVE'</span><span class="token punctuation">,</span> <span class="token string">'score'</span><span class="token punctuation">:</span> <span class="token number">0.9598047137260437</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Simply enough, what the <code>pipeline()</code> function takes as input are only two things:  a string of sentence and name of the task to perform. </p><p>By default, this pipeline selects a particular <strong>pretrained model</strong> that <strong>has been fine-tuned for sentiment analysis in English</strong>. </p><h3 id="Steps（工序）-of-the-pipeline-function"><a href="#Steps（工序）-of-the-pipeline-function" class="headerlink" title="Steps（工序） of the pipeline() function"></a>Steps（工序） of the <code>pipeline()</code> function</h3><p>There are three main steps involved when you pass some text to a pipeline:</p><ol><li>The text is <strong>preprocessed</strong> into a format the model can understand.</li><li>The preprocessed inputs are <strong>passed to the model</strong>.</li><li>The <strong>predictions</strong> of the model are <strong>post-processed</strong>, so you can make sense of them.</li></ol><h3 id="Pipelines-for-different-tasks"><a href="#Pipelines-for-different-tasks" class="headerlink" title="Pipelines for different tasks"></a>Pipelines for different tasks</h3><p>Some of the currently <a href="https://huggingface.co/transformers/main_classes/pipelines.html">available pipelines</a> are:</p><ul><li><code>feature-extraction</code> (get the vector representation of a text)</li><li><code>fill-mask</code></li><li><code>ner</code> (named entity recognition)</li><li><code>question-answering</code></li><li><code>sentiment-analysis</code></li><li><code>summarization</code></li><li><code>text-generation</code></li><li><code>translation</code></li><li><code>zero-shot-classification</code></li></ul><p>Each of these pipeline deploys a <code>default</code> model for the task, but you can also choose a particular model from the Hub to use in a pipeline for a specific task.  </p><p>Let’s try the <a href="https://huggingface.co/distilgpt2"><code>distilgpt2</code></a> model! Here’s how to load it in the same pipeline as before:</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> transformers <span class="token keyword">import</span> pipelinegenerator <span class="token operator">=</span> pipeline<span class="token punctuation">(</span><span class="token string">"text-generation"</span><span class="token punctuation">,</span> model<span class="token operator">=</span><span class="token string">"distilgpt2"</span><span class="token punctuation">)</span>generator<span class="token punctuation">(</span>    <span class="token string">"In this course, we will teach you how to"</span><span class="token punctuation">,</span>    max_length<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">,</span>    num_return_sequences<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>output:</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token string">'generated_text'</span><span class="token punctuation">:</span> <span class="token string">'In this course, we will teach you how to manipulate the world and '</span>                    <span class="token string">'move your mental and physical capabilities to your advantage.'</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span><span class="token string">'generated_text'</span><span class="token punctuation">:</span> <span class="token string">'In this course, we will teach you how to become an expert and '</span>                    <span class="token string">'practice realtime, and with a hands on experience on both real '</span>                    <span class="token string">'time and real'</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span>                    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;It connects a model with its necessary preprocessing and postprocessing steps, allowing us to directly input any text and get an intellig</summary>
+      
+    
+    
+    
+    
+    <category term="Transformers" scheme="http://hanliuliuhan.github.io/tags/Transformers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Architectures vs. Checkpoints</title>
+    <link href="http://hanliuliuhan.github.io/2022/12/02/Architectures-vs-Checkpoints/"/>
+    <id>http://hanliuliuhan.github.io/2022/12/02/Architectures-vs-Checkpoints/</id>
+    <published>2022-12-01T20:23:55.000Z</published>
+    <updated>2022-12-01T20:24:18.281Z</updated>
+    
+    <content type="html"><![CDATA[<p>As we dive into Transformer models in this course, you’ll see mentions of <em>architectures</em> and <em>checkpoints</em> as well as <em>models</em>. These terms all have slightly different meanings:</p><ul><li><strong>Architecture</strong>: This is the skeleton of the model — the definition of each layer and each operation that happens within the model.</li><li><strong>Checkpoints</strong>: These are the weights that will be loaded in a given architecture.</li><li><strong>Model</strong>: This is an umbrella term that isn’t as precise as “architecture” or “checkpoint”: it can mean both. This course will specify <em>architecture</em> or <em>checkpoint</em> when it matters to reduce ambiguity.</li></ul><p>For example, BERT is an architecture while <code>bert-base-cased</code>, a set of weights trained by the Google team for the first release of BERT, is a checkpoint. However, one can say “the BERT model” and “the <code>bert-base-cased</code> model.”</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;As we dive into Transformer models in this course, you’ll see mentions of &lt;em&gt;architectures&lt;/em&gt; and &lt;em&gt;checkpoints&lt;/em&gt; as well as &lt;em&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="Transformers" scheme="http://hanliuliuhan.github.io/tags/Transformers/"/>
+    
+  </entry>
   
   <entry>
     <title>Attention Layers</title>
